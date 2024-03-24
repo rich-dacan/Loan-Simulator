@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css\" />
+    <title>Loan Simulator</title>
+  </head>
+  <body>
+    <h2>Loan Simulator</h2>
+    <form action="process_form.php" method="post">
+      <label for="loan_amount">Loan Amount:</label>
+      <input
+        type="text"
+        id="loan_amount"
+        name="loan_amount"
+        required
+      /><br /><br />
+
+      <label for="installments">Number of Installments:</label>
+      <input
+        type="number"
+        id="installments"
+        name="installments"
+        required
+      /><br /><br />
+
+      <label for="score">Serasa Score:</label>
+      <input type="number" id="score" name="score" required /><br /><br />
+
+      <label for="bank_customer">Are you a bank customer?</label>
+      <select id="bank_customer" name="bank_customer" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option></select
+      ><br /><br />
+
+      <label for="unemployment_insurance"
+        >Include unemployment insurance?</label
+      >
+      <select
+        id="unemployment_insurance"
+        name="unemployment_insurance"
+        required
+      >
+        <option value="yes">Yes</option>
+        <option value="no">No</option></select
+      ><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
