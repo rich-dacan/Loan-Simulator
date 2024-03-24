@@ -8,35 +8,8 @@ session_start();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../src/styles/style.css">
   <title>Loan Simulator Result</title>
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  .result-container {
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    text-align: center;
-  }
-
-  .result-item {
-    margin-bottom: 10px;
-  }
-  </style>
 </head>
 
 <body>
@@ -52,8 +25,21 @@ session_start();
         $bank_customer = $_SESSION["bank_customer"];
         $unemployment_insurance = $_SESSION["unemployment_insurance"];
 
-        simulateLoan($loan_amount, $installments, $score, $bank_customer, $unemployment_insurance);
+        if ($loan_amount !== null && $installments !== null && $score !== null && $bank_customer !== null && $unemployment_insurance !== null) {
+          echo "<ul>";
+          simulateLoan($loan_amount, $installments, $score, $bank_customer, $unemployment_insurance);
+          echo "</ul>";
+          // echo "<p>Accept this loan simulation? <a href='#'>Yes</a> | <a href='#'>No</a></p>";
+          echo "<p>Accept this loan simulation?</p>";
+        } else {
+          echo "<p>Error: Unable to retrieve loan simulation data. \nPlease contact the support.</p>";
+        }
       ?>
+
+    <div class="btn__wrapper">
+      <a href="../index.html" class="btn">Back to Form</a>
+      <a href="#" class="btn">Next step</a>
+    </div>
   </div>
 </body>
 

@@ -41,9 +41,9 @@ function simulateLoan($loan_amount, $installments, $score, $bank_customer, $unem
   // Calculate value of each installment
   $installment_value = $cet / $installments;
 
-  echo "Installment value: $" . number_format($installment_value, 2) . "\n";
-  echo "Used interest rate: " . ($interest_rate * 100) . "%\n";
-  echo "CET (Total Effective Cost): $" . number_format($cet, 2) . "\n";
+  echo "<li>Installment value: $" . number_format($installment_value, 2) . "</li>\n";
+  echo "<li>Used interest rate: " . ($interest_rate * 100) . "%</li>\n";
+  echo "<li>CET (Total Effective Cost): $" . number_format($cet, 2) . "</li>\n";
 }
 
 // Uncomment the following code to run the loan simulation in the terminal

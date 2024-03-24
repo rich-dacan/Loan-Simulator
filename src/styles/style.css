@@ -61,3 +61,48 @@ button[type="submit"]:hover {
   transform: scale(1.05);
   background-color: #45a049;
 }
+
+.result-container {
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.result-item {
+  margin-bottom: 10px;
+}
+
+.btn__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+
+    &:hover {
+      background-color: #45a049;
+    }
+
+    &:first-child {
+      background-color: #9fa0a0;
+
+      &:hover {
+        background-color: #535757;
+      }
+    }
+  }
+}
