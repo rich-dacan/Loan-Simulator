@@ -25,3 +25,9 @@ Após calcular os juros e demais encargos do empréstimo, o sistema deve apresen
 O CET reúne todos os gastos envolvidos na operação de empréstimo. São eles: juros, IOF, seguro, tributos, registros e demais despesas, que devem ser especificadas no contrato.
 
 Após apresentar o resultado da simulação o sistema deve perguntar ao usuário se ele deseja realizar outra simulação ou encerrar o programa.
+
+
+---
+
+## PHP runtime to host this project on Vercel
+https://github.com/vercel-community/php
