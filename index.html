@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/style.css\" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
     <title>Loan Simulator</title>
   </head>
   <body>
@@ -29,24 +29,32 @@
       <input type="number" id="score" name="score" required /><br /><br />
 
       <label for="bank_customer">Are you a bank customer?</label>
-      <select id="bank_customer" name="bank_customer" required>
+      <select
+        class="custom__select"
+        id="bank_customer"
+        name="bank_customer"
+        required
+      >
         <option value="yes">Yes</option>
-        <option value="no">No</option></select
-      ><br /><br />
+        <option value="no">No</option>
+      </select>
+      <br /><br />
 
       <label for="unemployment_insurance"
         >Include unemployment insurance?</label
       >
       <select
+        class="custom__select"
         id="unemployment_insurance"
         name="unemployment_insurance"
         required
       >
         <option value="yes">Yes</option>
-        <option value="no">No</option></select
-      ><br /><br />
+        <option value="no">No</option>
+      </select>
+      <br /><br />
 
-      <button type="submit">Submit</button>
+      <button type="submit">Simulate</button>
     </form>
   </body>
 </html>

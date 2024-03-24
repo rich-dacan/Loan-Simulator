@@ -44,12 +44,20 @@ input[type="checkbox"] {
   font-size: 12px;
 }
 
-input[type="submit"] {
+button[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 5px;
   background-color: #4CAF50;
-  color: white;
+  color: #fff;
   cursor: pointer;
+  transition: all ease-in-out .25s;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
+  transition: all ease-in-out .25s;
+  transform: scale(1.05);
   background-color: #45a049;
 }
