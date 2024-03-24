@@ -23,9 +23,10 @@ function calculateInterestRate($score) {
 
 function simulateLoan($loan_amount, $installments, $score, $bank_customer, $unemployment_insurance) {
   if ($bank_customer) {
-      $interest_rate = 0.03; // 3% for bank customers
+    $interest_rate = 0.03; // 3% for bank customers
+
   } else {
-      $interest_rate = calculateInterestRate($score);
+    $interest_rate = calculateInterestRate($score);
   }
 
   // Registration fee for non-customers
@@ -40,38 +41,38 @@ function simulateLoan($loan_amount, $installments, $score, $bank_customer, $unem
   // Calculate value of each installment
   $installment_value = $cet / $installments;
 
-  // Present results
   echo "Installment value: $" . number_format($installment_value, 2) . "\n";
   echo "Used interest rate: " . ($interest_rate * 100) . "%\n";
   echo "CET (Total Effective Cost): $" . number_format($cet, 2) . "\n";
 }
 
-function startApplication() {
-  while (true) {
-    echo "Enter loan amount: ";
-    $loan_amount = floatval(fgets(STDIN));
+// Uncomment the following code to run the loan simulation in the terminal
+// function startApplication() {
+//   while (true) {
+//     echo "Enter loan amount: ";
+//     $loan_amount = floatval(fgets(STDIN));
 
-    echo "Enter number of installments: ";
-    $installments = intval(fgets(STDIN));
+//     echo "Enter number of installments: ";
+//     $installments = intval(fgets(STDIN));
 
-    echo "Enter your Serasa Score: ";
-    $score = intval(fgets(STDIN));
+//     echo "Enter your Serasa Score: ";
+//     $score = intval(fgets(STDIN));
 
-    echo "Are you a bank customer? (y/n): ";
-    $bank_customer = strtolower(trim(fgets(STDIN))) == 'y' ? true : false;
+//     echo "Are you a bank customer? (y/n): ";
+//     $bank_customer = strtolower(trim(fgets(STDIN))) == 'y' ? true : false;
 
-    echo "Do you want to include unemployment insurance? (y/n): ";
-    $unemployment_insurance = strtolower(trim(fgets(STDIN))) == 'y' ? true : false;
+//     echo "Do you want to include unemployment insurance? (y/n): ";
+//     $unemployment_insurance = strtolower(trim(fgets(STDIN))) == 'y' ? true : false;
 
-    simulateLoan($loan_amount, $installments, $score, $bank_customer, $unemployment_insurance);
+//     simulateLoan($loan_amount, $installments, $score, $bank_customer, $unemployment_insurance);
 
-    echo "Do you want to make another simulation? (y/n): ";
-    $continue = strtolower(trim(fgets(STDIN)));
+//     echo "Do you want to make another simulation? (y/n): ";
+//     $continue = strtolower(trim(fgets(STDIN)));
 
-    if ($continue != 'y') {
-        break;
-    }
-  }
-}
+//     if ($continue != 'y') {
+//         break;
+//     }
+//   }
+// }
 
-startApplication();
+// startApplication();
