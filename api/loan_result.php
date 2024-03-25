@@ -16,7 +16,7 @@ session_start();
   <div class="result-container">
     <h2>Loan Simulation Result</h2>
     <?php
-        include_once "./loan_simulation.php";
+        include_once "loan_simulation.php";
 
         // Session data from the form submission
         $loan_amount = $_SESSION["loan_amount"];
